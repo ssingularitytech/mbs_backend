@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  simulation_id: 1
+  user_id: 1
+  user_data: 
+
+two:
+  simulation_id: 1
+  user_id: 1
+  user_data: 

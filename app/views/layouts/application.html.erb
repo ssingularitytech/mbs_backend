@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head >
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>QuoDeck</title>
+      <%= csrf_meta_tags %>
+      <!-- <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css"> -->
+      <%#= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        
+    <%#= javascript_include_tag 'application'%>
+    
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js"></script> -->
+  </head>
+    <body class="portrait" data-turbolinks="false">
+     
+    <!-- Start Page Loading -->
+
+    <div class="content" id="main-wrapper">
+    <!-- START CONTAINER -->
+        <%= yield %>
+    <!-- END CONTAINER -->
+    </div>
+
+    <!-- End Content -->
+
+</body>
+</html>
