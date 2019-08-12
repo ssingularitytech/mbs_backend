@@ -57,6 +57,6 @@ class Api::V1::SimulationResultsController < Api::V1::ApiController
 
     # Only allow a trusted parameter "white list" through.
     def simulation_result_params
-      params.fetch(:simulation_result, {}).permit(:user_id, :simulation_id, {user_data: [detail: [], simResult: []]})
+      params.fetch(:simulation_result, {}).permit(:user_id, :simulation_id, {user_data: [questions: [], simParams: []]})
     end
 end
