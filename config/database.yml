@@ -20,6 +20,10 @@ default: &default
   username: quodeck
   password: ptotem123
   host: 127.0.0.1
+  # username: postgres
+  # password: 
+  # host: db
+  
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -84,5 +88,5 @@ test:
 production:
   <<: *default
   database: mbs_backend_production
-  username: mbs_backend
-  password: <%= ENV['MBS_BACKEND_DATABASE_PASSWORD'] %>
+  # username: mbs_backend
+  # password: <%= ENV['MBS_BACKEND_DATABASE_PASSWORD'] %>

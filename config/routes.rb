@@ -15,7 +15,7 @@ Rails.application.routes.draw do
           get 'simulation_index/:id' => 'simulation_results#simulation_index'
         end
         member do
-          get 'simulation_show/:simulation_id' => 'simulation_results#simulation_show'
+          get 'simulation_show/:simulation_id' => 'simulation_results#simulation_user_show'
         end
       end
     end  

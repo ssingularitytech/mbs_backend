@@ -3,8 +3,8 @@ class Api::V1::SimulationResultsController < Api::V1::ApiController
   skip_before_action :authenticate_user!, only: [:create, :index, :show, :simulation_index, :simulation_user_show], raise: false
   # GET /simulation_results
   def index
-    # @simulation_results = SimulationResult.includes(:user).map{|i| {id: i.id, user_id: i.user_id, email: i.user.email, user_data: {questions: i.user_data["questions"], simParams: i.user_data["simParams"]}}}
-    @simulation_results =  SimulationResult.all
+    @simulation_results = SimulationResult.includes(:user).map{|i| {id: i.id, user_id: i.user_id, email: i.user.email, simulation_id: i.simulation_id, user: i.user.as_json(only: [:email, :name, :nickname]), user_data: {questions: i.user_data["questions"], simParams: i.user_data["simParams"]}}}
+    # @simulation_results =  SimulationResult.all
     render json: @simulation_results
   end
 
@@ -20,7 +20,8 @@ class Api::V1::SimulationResultsController < Api::V1::ApiController
   end
 
   def simulation_user_show
-    @simulation_result = SimulationResult.find_by(user_id: params[:id], simulation_id: params[:simulation_id])
+    @simulation_result = SimulationResult.find_by(user_id: params[:id], simulation_id: params[:simulation_id]).as_json(:include => :user)
+    render json: @simulation_result
   end
 
   # POST /simulation_results
