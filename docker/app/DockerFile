@@ -36,6 +36,8 @@ COPY . .
 # RUN bundle exec rake db:migrate
 # RUN bundle exec rake db:seed
 # RUN node --version
+RUN rm config/master.key credentials.yml.enc
+RUN rails credentials:edit
 RUN bundle exec rake assets:precompile
 
 EXPOSE 3000
