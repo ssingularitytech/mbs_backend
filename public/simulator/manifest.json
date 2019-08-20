@@ -1,0 +1,20 @@
+{
+  "short_name": "Techknowzeal",
+  "name": "Techknowzeal",
+  "icons": [
+    {
+      "src": "assets/icons/png/64x64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "assets/icons/png/1024x1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": "/creator/?utm_source=homescreen",
+  "background_color": "#f5f5f5",
+  "display": "standalone",
+  "theme_color": "#666666"
+}
